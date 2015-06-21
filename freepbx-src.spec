@@ -14,7 +14,7 @@ Release:        %{release}%{?dist}
 License:        GPL
 Group:          System/Servers
 
-Source0:	freepbx-%{version}.tar.gz
+Source0:	freepbx-%{version}.tgz
 #Source1:	panel-0.1.tgz
 
 BuildRoot:      /var/tmp/%{name}-%{version}-%{release}-buildroot
