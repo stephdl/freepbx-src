@@ -2,7 +2,7 @@
 # Authority: vip-ire
 # Name: Daniel Berteaud
 
-%define version 2.5.1
+%define version 2.11.0.38
 %define release 2
 %define name freepbx-src
 
@@ -15,7 +15,7 @@ License:        GPL
 Group:          System/Servers
 
 Source0:	freepbx-%{version}.tar.gz
-Source1:	panel-0.1.tgz
+#Source1:	panel-0.1.tgz
 
 BuildRoot:      /var/tmp/%{name}-%{version}-%{release}-buildroot
 URL:            http://www.freepbx.org/
@@ -32,6 +32,9 @@ FreePBX is a Standardised Implementation of Asterisk that gives you a GUI to man
 This package only contains the sources, and should be installed with smeserver-freepbx
 
 %changelog
+* Sun Jun 21 2015 stephane de Labrusse <stephdl@de-labrusse.fr> 2.11.0.38
+- Initial release to sme9
+
 * Tue May 21 2013 JP Pialasse <tests@pialasse.com> [2.5.1-2]
 - add php-process requirement bug [SME: 7382]
 
@@ -51,7 +54,7 @@ This package only contains the sources, and should be installed with smeserver-f
 %{__mkdir_p} root/usr/share/freepbx/sources
 tar xzf %{SOURCE0} -C root/usr/share/freepbx/sources
 # Extract panel module (not an official module yet)
-tar xzf %{SOURCE1} -C root/usr/share/freepbx/sources/freepbx-%{version}/amp_conf/htdocs/admin/modules
+#tar xzf %{SOURCE1} -C root/usr/share/freepbx/sources/freepbx-%{version}/amp_conf/htdocs/admin/modules
 ln -s /usr/share/freepbx/sources/freepbx-%{version} root/usr/share/freepbx/sources/freepbx
 
 %install
